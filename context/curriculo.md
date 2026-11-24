@@ -5,7 +5,7 @@ glossário e material complementar. `<meta name="curso" content="devia62">`.
 
 Fontes: `docs/sintese-executiva-2026-09-27.md` (base das afirmações — tem ressalvas e fontes),
 `docs/mensagem-nei-2026-09-27.md` (tom e ênfase), e as páginas do Eventos
-`~/projetos/inemaeventos/codex-claude/` e `~/projetos/inemaeventos/claude-codex/` (seis níveis do Use Both,
+`~/projetos/ARCKHÉeventos/codex-claude/` e `~/projetos/ARCKHÉeventos/claude-codex/` (seis níveis do Use Both,
 tabela de rotas, comandos `codex exec` / `claude -p`, handoff e prime, núcleo portátil).
 
 ## Passo 0 — descoberta (aprovado pelo Nei em 28/09/2026: propostas aceitas, 30 aulas, vídeos pelo explicavideos v2)

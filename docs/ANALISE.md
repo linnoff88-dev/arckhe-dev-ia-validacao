@@ -13,9 +13,9 @@ adicional, não verificada" o OpenRouter, os modelos abertos e o `/advisor`, e t
 como hipótese. O curso adota essa régua (ver "Regras de conteúdo" em `context/curriculo.md`).
 
 As fontes somam ~6 KB. O conteúdo das aulas vem também das páginas-fonte citadas, que já estão no disco:
-`~/projetos/inemaeventos/codex-claude/index.html` (seis níveis do Use Both, tabela de rotas, comandos
+`~/projetos/ARCKHÉeventos/codex-claude/index.html` (seis níveis do Use Both, tabela de rotas, comandos
 `codex exec --sandbox read-only` / `claude -p`, "/goal caro", imagem com o Codex) e
-`~/projetos/inemaeventos/claude-codex/index.html` (núcleo portátil, handoff/prime, audit antes de implement).
+`~/projetos/ARCKHÉeventos/claude-codex/index.html` (núcleo portátil, handoff/prime, audit antes de implement).
 
 ## 2. Posicionamento (não repetir o que já existe)
 
@@ -69,9 +69,9 @@ GitHub Pages na raiz; card no portal via skill `atualiza-portal` só quando o Ne
 
 | Etapa | O que chamaria | Padrão sem autorização |
 |---|---|---|
-| Cenas das aulas (`gerar-cena.py`) | padrão da skill = Codex image_gen (crédito) | `--gerador flux --seed N` (inemaimg local) |
+| Cenas das aulas (`gerar-cena.py`) | padrão da skill = Codex image_gen (crédito) | `--gerador flux --seed N` (ARCKHÉimg local) |
 | Tradução EN/ES (`traduzir-curso.py`) | OpenRouter (GPT-5.4 nano) | curso só em PT até autorizar |
-| Capa (`capa-inema`) | modo auto pode chamar Codex | `--raw-in trilha.png` (arte já gerada no flux) |
+| Capa (`capa-ARCKHÉ`) | modo auto pode chamar Codex | `--raw-in trilha.png` (arte já gerada no flux) |
 | Vídeos explicavideos v1 | HeyGen Studio (crédito da assinatura) + API HeyGen de consulta | não gerar; pedir ok no momento |
 | Transcrição dos vídeos | Groq (API) | `"transcriber": "whisper-local"` |
 | `atualiza-portal` | `npm run gen:data` → Groq nos feeds | só `node tools/gen-courses-data.mjs` |

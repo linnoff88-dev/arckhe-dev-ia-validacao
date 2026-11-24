@@ -35,7 +35,7 @@ Windows, planilha + chat de IA + Codex pelo app, nunca abriu terminal) e corrija
 
 ## Regras aprendidas no M1 (obrigatórias)
 
-- Kicker `Módulo N · Aula k de 5`; rodapé `Aula N · Dev com IA v6.2 · INEMA.CLUB`; nav anterior/próxima; a última aula do
+- Kicker `Módulo N · Aula k de 5`; rodapé `Aula N · Dev com IA v6.2 · ARCKHÉ AI`; nav anterior/próxima; a última aula do
   módulo aponta "voltar à trilha →" (`#trilha`); a aula 30 idem.
 - Termos: em CADA aula, a 1ª ocorrência de modelo, critério de aceite, revisão cruzada, briefing, handoff, token, terminal
   (e qualquer termo da lista-sentinela ou de `termos`: diff, briefing, handoff, prime, sandbox, token) leva `.gterm` com
@@ -57,7 +57,7 @@ Windows, planilha + chat de IA + Codex pelo app, nunca abriu terminal) e corrija
 - Cada aula se sustenta sozinha: diga onde está o que veio antes ("o briefing.md da aula 5, na pasta do piloto") e dê saída
   para quem pulou.
 - Cards: 3–4, terminam em "?", decisão/diagnóstico/aplicação, sem repetir ≥6 palavras da cola.
-- Material complementar opcional, com fonte (páginas do Eventos: `~/projetos/inemaeventos/codex-claude/index.html`,
+- Material complementar opcional, com fonte (páginas do Eventos: `~/projetos/ARCKHÉeventos/codex-claude/index.html`,
   `claude-codex/index.html`; kit Use Both `~/projetos/use-both-claude-codex/GUIDE.md`, `PROMPTS.md`; kit
   `~/projetos/agente-claude-codex`; síntese `docs/sintese-executiva-2026-09-27.md`).
 

@@ -14,7 +14,7 @@ Motor: `~/projetos/explicavideos` (README 2.2.3, `engine/v2/AUTHORING.md`). Refe
 1. **Aulas do módulo prontas** (auditor ≥ 9/10) — o vídeo narra o curso; sem aula não há roteiro.
 2. **Roteiro de cenas** `~/projetos/output/dev-ia-validacao/roteiro/mN-pt.json` (title, chapter, speech, labels,
    source, kind, takeaway), revisado pelo Nei antes do `start`.
-3. **v1 = avatar do Nei no HeyGen Studio** pela assinatura (template TEMPLATE-AVATAR16, voz INEMATIME, Avatar III),
+3. **v1 = avatar do Nei no HeyGen Studio** pela assinatura (template TEMPLATE-AVATAR16, voz ARCKHÉTIME, Avatar III),
    blocos de até 4.400 caracteres. **Consome crédito HeyGen → só com ok explícito no momento, nunca em background.**
 4. **Transcrição com tempo por palavra:** config com `"transcriber": "whisper-local"` (sem Groq) e
    `"balanced_blocks": true`.
@@ -30,8 +30,8 @@ Configs a criar em `~/projetos/explicavideos/examples/` (copiando os do OSWork v
 {"id":"devia62-m1","title":"Dev com IA v6.2 · Módulo 1","source_repo":"/home/nmaldaner/projetos/dev-ia-validacao",
  "output":"/home/nmaldaner/projetos/output/dev-ia-validacao/m1","languages":["pt"],
  "scene_files":{"pt":"/home/nmaldaner/projetos/output/dev-ia-validacao/roteiro/m1-pt.json"},
- "github_repo":"inematds/dev-ia-validacao","release_tag":"video-v1.0.0","template":"TEMPLATE-AVATAR16",
- "profile":"/home/nmaldaner/.cache/inemaccbot/perfil-heygen","max_chars":4400,
+ "github_repo":"linnoff88-dev/dev-ia-validacao","release_tag":"video-v1.0.0","template":"TEMPLATE-AVATAR16",
+ "profile":"/home/nmaldaner/.cache/ARCKHÉccbot/perfil-heygen","max_chars":4400,
  "transcriber":"whisper-local","balanced_blocks":true}
 ```
 e o `devia62-m1-v2.json` com `"engine":"v2"`, `"v1_output"` apontando para o de cima e `"release_tag":"video-v2.0.0"`.
@@ -50,5 +50,5 @@ e o `devia62-m1-v2.json` com `"engine":"v2"`, `"v1_output"` apontando para o de 
 ## Custo e alternativa sem crédito
 
 - Único custo externo: **HeyGen (avatar v1)**, ~16 min de avatar por módulo × 6 módulos. Conferir saldo antes.
-- **Alternativa local, sem avatar e sem crédito:** skill `video-explicativo` (HyperFrames + voz inemavox local),
+- **Alternativa local, sem avatar e sem crédito:** skill `video-explicativo` (HyperFrames + voz ARCKHÉvox local),
   um vídeo curto por módulo (~2 min, 16:9 + 9:16) — serve de trailer/divulgação do curso, não substitui a vídeo-aula.
