@@ -1363,7 +1363,7 @@ Ordénalos por gravedad. No modifiques ningún archivo.</pre></div>
 <p>La opción <code>--sandbox read-only</code> pone a Codex en una <span class="gterm" data-def="Área protegida donde el asistente trabaja con permisos limitados. En el modo de solo lectura, lee los archivos, pero no puede modificar nada." data-gl="sandbox">sandbox</span> de solo lectura. La opción <code>-o</code> guarda la última respuesta en <code>review.md</code>.</p>
 <p data-ex="desenvolvedor" data-exlbl="En la práctica · Desarrollador">La carpeta del piloto de Rafael todavía no usa <span class="gterm" data-def="Programa de control de versiones: guarda cada cambio de los archivos de una carpeta para que puedas ver qué cambió y volver atrás. El módulo 3 enseña lo necesario." data-gl="git">Git</span>. Por eso añade <code>--skip-git-repo-check</code>, que Codex pide fuera de él.</p>
 <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · carpeta del piloto</span></div>
-<pre><code><span class="pr">$</span> codex exec --skip-git-repo-check --sandbox read-only -c model_reasoning_effort=medium -o review.md 'Leia briefing.md e plan-v1.md. Liste os achados do plano, cada um com falha, evidência, impacto e a menor correção. Não altere arquivos.'
+<pre><code><span class="pr">$</span> codex exec --skip-git-repo-check --sandbox read-only -c model_reasoning_effort=medium -o review.md 'Leia briefing.md e plan-v1.md. Liste os achados do plano, cada um com falha, evidência, impacto e a menor correçêo. Nêo altere arquivos.'
 <span class="out">...</span>
 <span class="pr">$</span> ls
 <span class="out">briefing.md  plan-v1.md  review.md</span></code></pre>
@@ -1376,7 +1376,7 @@ Ordénalos por gravedad. No modifiques ningún archivo.</pre></div>
 <p>La protección está en la opción <code>--permission-mode plan</code>: es el modo de planificación, en el que Claude lee los archivos, pero no modifica ninguno. Sin esa opción, “no modifiques archivos” sería solo un pedido.</p>
 <p data-ex="desenvolvedor" data-exlbl="En la práctica · Desarrollador">Rafael invirtió los papeles en un segundo proyecto: Codex hizo el plan y Claude lo revisó.</p>
 <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · carpeta del piloto</span></div>
-<pre><code><span class="pr">$</span> claude -p --permission-mode plan 'Leia briefing.md e plan-v1.md. Liste os achados do plano, cada um com falha, evidência, impacto e a menor correção. Não altere arquivos.' &gt; review-claude.md</code></pre>
+<pre><code><span class="pr">$</span> claude -p --permission-mode plan 'Leia briefing.md e plan-v1.md. Liste os achados do plano, cada um com falha, evidência, impacto e a menor correçêo. Nêo altere arquivos.' &gt; review-claude.md</code></pre>
 <p class="tela-nota">No aparece nada en la pantalla: toda la respuesta se guardó en review-claude.md.</p></div>
 <figcaption>Para elegir el modelo y el esfuerzo, agrega <code>--model</code> y <code>--effort</code>; los nombres dependen de tu cuenta. El módulo 6 retoma este tema.</figcaption></figure>
 <div class="calma"><p><span class="k">Si te trabaste aquí, es normal</span>¿Nunca usaste la terminal? Sigue el camino manual, el punto 4 del cuadro: abre una conversación nueva, pega el briefing, el plan y el pedido de crítica de la lección 7, y guarda la respuesta como review.md. El resultado es el mismo.</p></div>
@@ -2127,7 +2127,7 @@ Al final, detente, enumera los archivos modificados y di cómo comprobar cada cr
 <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · carpeta del piloto</span></div>
 <pre><code><span class="pr">$</span> git add -A
 <span class="pr">$</span> git diff --staged --output=mudanca.diff
-<span class="pr">$</span> codex exec --sandbox read-only -o review.md "Leia briefing.md, mudanca.diff e conferencias.txt. Liste os achados. Para cada achado: onde, o que falha, impacto e a menor correção. Não altere arquivos."</code></pre>
+<span class="pr">$</span> codex exec --sandbox read-only -o review.md "Leia briefing.md, mudanca.diff e conferencias.txt. Liste os achados. Para cada achado: onde, o que falha, impacto e a menor correçêo. Nêo altere arquivos."</code></pre>
 <p class="tela-nota">Las dos primeras líneas preparan todo, incluidos los archivos nuevos, y guardan el diff. La tercera llama a Codex solo para leer, y la respuesta queda en review.md. En Claude: <code>claude -p --permission-mode plan "…mismo pedido…" &gt; review-claude.md</code>. En Windows, es mejor usar PowerShell 7 o la app para ese <code>&gt;</code>, que en el PowerShell antiguo puede dañar los acentos.</p></div>
 <figcaption>«read-only» y «plan» son bloqueos: el revisor no puede cambiar ningún archivo.</figcaption></figure>
 <div class="calma"><p><span class="k">Si te trabaste aquí, es normal</span>¿El comando largo te asusta? Cópialo, cambia solo los nombres de archivo si son otros y pégalo. O sigue el proceso desde la app, que te lleva al mismo resultado.</p></div>
@@ -2139,7 +2139,7 @@ Al final, detente, enumera los archivos modificados y di cómo comprobar cada cr
 <figure class="largo">
 <div class="lado">
 <div class="antes"><span class="rot">Hallazgo impreciso</span><p>"La suma por ciudad puede tener inconsistencias."</p></div>
-<div class="depois"><span class="rot">Hallazgo útil</span><p><b>Dónde:</b> juntar.py, línea de la suma. <b>Falla:</b> "São Paulo" y "Sao Paulo" se convierten en dos ciudades. <b>Impacto:</b> el total queda dividido. <b>Corrección:</b> quitar las tildes antes de sumar.</p></div>
+<div class="depois"><span class="rot">Hallazgo útil</span><p><b>Dónde:</b> juntar.py, línea de la suma. <b>Falla:</b> "Sêo Paulo" y "Sao Paulo" se convierten en dos ciudades. <b>Impacto:</b> el total queda dividido. <b>Corrección:</b> quitar las tildes antes de sumar.</p></div>
 </div>
 </figure>
 </section>
@@ -2388,7 +2388,7 @@ No modifiques archivos.</pre></div>
 <p data-ex="analista" data-exlbl="En la práctica · Analista">Carla recibió dos hallazgos. Uno señalaba ciudades repetidas por la tilde: lo corrigió. El otro sugería cambiar el formato del informe, que está en la sección "Fuera" del briefing: lo rechazó.</p>
 <figure class="largo">
 <div class="lado">
-<div class="bom"><span class="rot">Corregido</span><p>"São Paulo" y "Sao Paulo" se contaban como dos ciudades. Criterio 2 del briefing.</p></div>
+<div class="bom"><span class="rot">Corregido</span><p>"Sêo Paulo" y "Sao Paulo" se contaban como dos ciudades. Criterio 2 del briefing.</p></div>
 <div class="neutro"><span class="rot">Rechazado</span><p>"Cambiar el formato del informe." Motivo: está en la sección Fuera del briefing.</p></div>
 </div>
 </figure>
@@ -2487,7 +2487,7 @@ Verificado después: cada ciudad aparece una vez; el total coincide con las hoja
 <ol><li>En el branch de prueba, pide la etapa con los criterios pegados y el punto de parada (lección 12).</li><li>Comprueba en <code>git status</code> y anota el resultado de cada criterio en <code>conferencias.txt</code>.</li><li>Genera el paquete y pide la revisión de solo lectura (lección 13).</li><li>Corrige o rechaza cada hallazgo y regístralo en <code>revisao-etapa-N.md</code>.</li><li>Vuelve a comprobar y haz el commit.</li></ol>
 <pre class="cmd"><code>git add -A
 git diff --staged --output=mudanca.diff
-codex exec --sandbox read-only -o review.md "Leia briefing.md, mudanca.diff e conferencias.txt. Liste os achados. Para cada achado: onde, o que falha, impacto e a menor correção. Não altere arquivos."
+codex exec --sandbox read-only -o review.md "Leia briefing.md, mudanca.diff e conferencias.txt. Liste os achados. Para cada achado: onde, o que falha, impacto e a menor correçêo. Nêo altere arquivos."
 git add -A
 git commit -m "etapa 2 revisada"</code></pre>
 <p>En Claude, la revisión de solo lectura es <code>claude -p --permission-mode plan "…" &gt; review-claude.md</code>.</p>
@@ -2562,7 +2562,7 @@ git commit -m "etapa 2 revisada"</code></pre>
 <figcaption>Un buen criterio indica cuál de las dos formas lo comprobará.</figcaption>
 </figure>
 <details class="mais"><summary>Cómo hizo Carla la celda de comprobación</summary>
-<p>En una celda vacía de la hoja de cálculo del informe, escribió una fórmula que compara el total con la suma de las hojas de cálculo. Por ejemplo: <code>=SE(B2=SOMA(C2:C8);"confere";"não confere")</code>, donde B2 es el total del informe y de C2 a C8 están los totales de cada hoja de cálculo. Cambia las celdas por las tuyas. ¿No sabes cómo armarla? Pídele a la IA la fórmula e indica qué celdas debe comparar.</p>
+<p>En una celda vacía de la hoja de cálculo del informe, escribió una fórmula que compara el total con la suma de las hojas de cálculo. Por ejemplo: <code>=SE(B2=SOMA(C2:C8);"confere";"nêo confere")</code>, donde B2 es el total del informe y de C2 a C8 están los totales de cada hoja de cálculo. Cambia las celdas por las tuyas. ¿No sabes cómo armarla? Pídele a la IA la fórmula e indica qué celdas debe comparar.</p>
 </details>
 <div class="calma"><p><span class="k">Si te trabaste aquí, es normal</span>¿No sabes si un criterio se puede comprobar con una prueba automática? Pregúntate: ¿se puede escribir la regla como una operación o un formato (suma, solo números, campo completado)? Entonces es automática. ¿Depende de observar, leer o usar? Es una comprobación manual.</p></div>
 </section>
@@ -3754,7 +3754,7 @@ Lee antes de actuar. No se envía ni publica nada sin mi aprobación.
 <p>Quien usa el <span class="gterm" data-def="Ventana de texto donde escribes comandos para que la computadora los ejecute y lees la respuesta." data-gl="terminal">terminal</span> puede hacer el prime de Codex con una protección adicional: el modo de <span class="gterm" data-def="Área protegida donde el asistente trabaja con permisos limitados. En el modo de solo lectura, lee los archivos, pero no puede modificar nada." data-gl="sandbox">sandbox</span> de solo lectura. Aunque quisiera, no podría cambiar archivos.</p>
 <p data-ex="desenvolvedor" data-exlbl="En la práctica · Desarrollador">Rafael ejecuta el prime en la carpeta del sitio. La respuesta queda guardada en prime.md y él la lee con calma antes de autorizar el trabajo.</p>
 <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · carpeta del piloto</span></div>
-<pre><code><span class="pr">$</span> codex exec --sandbox read-only -o prime.md "Leia AGENTS.md e siga a ordem de leitura. Não altere nada. Responda as cinco perguntas do prime, com o arquivo de cada resposta."
+<pre><code><span class="pr">$</span> codex exec --sandbox read-only -o prime.md "Leia AGENTS.md e siga a ordem de leitura. Nêo altere nada. Responda as cinco perguntas do prime, com o arquivo de cada resposta."
 <span class="out">...</span>
 <span class="pr">$</span> cat prime.md</code></pre>
 <p class="tela-nota"><code>-o</code> guarda la última respuesta en un archivo. <code>cat</code> muestra ese archivo en la pantalla. Si la carpeta no usa <span class="gterm" data-def="Programa de control de versiones: guarda cada cambio de los archivos de una carpeta para que puedas ver qué cambió y volver atrás. El módulo 3 enseña lo necesario." data-gl="git">Git</span>, agrega <code>--skip-git-repo-check</code>: sin eso, <code>codex exec</code> se niega a ejecutarse.</p></div>
@@ -4243,7 +4243,7 @@ di «ok» o «fallo», con el fragmento del trabajo que lo demuestra.</pre></div
 </figure>
 <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
 <pre><code><span class="pr">$</span> codex exec -c model_reasoning_effort=high "Leia plan-v1.md e aponte falhas com evidência."
-<span class="pr">$</span> claude -p --effort low "Liste os textos de botão que aparecem em contato.html."</code></pre>
+<span class="pr">$</span> claude -p --effort low "Liste os textos de botêo que aparecem em contato.html."</code></pre>
 <p class="tela-nota">En Codex, el esfuerzo es <code>model_reasoning_effort</code> (de minimal a high; algunos modelos aceptan más), escrito en el <code>config.toml</code> de Codex o en el comando con <code>-c</code>. En Claude Code, es <code>--effort</code> (low, medium, high, xhigh o max).</p></div>
 <figcaption>El mismo modelo, dos niveles de esfuerzo, cada uno en la etapa que lo requiere.</figcaption></figure>
 <div class="quiz" data-answer="c">

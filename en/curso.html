@@ -1363,7 +1363,7 @@ Order them by severity. Do not change any files.</pre></div>
 <p>The <code>--sandbox read-only</code> option puts Codex in a read-only <span class="gterm" data-def="A protected area where the assistant works with limited permissions. In read-only mode, it can read files but cannot change anything." data-gl="sandbox">sandbox</span>. The <code>-o</code> option saves the last response to <code>review.md</code>.</p>
 <p data-ex="desenvolvedor" data-exlbl="In practice · Developer">Rafael’s pilot folder does not use <span class="gterm" data-def="A version control program: it saves each change to the files in a folder so you can see what changed and undo changes. Module 3 teaches what you need." data-gl="git">Git</span> yet. So he adds <code>--skip-git-repo-check</code>, which Codex requires when you run it outside a Git repository.</p>
 <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · pilot folder</span></div>
-<pre><code><span class="pr">$</span> codex exec --skip-git-repo-check --sandbox read-only -c model_reasoning_effort=medium -o review.md 'Leia briefing.md e plan-v1.md. Liste os achados do plano, cada um com falha, evidência, impacto e a menor correção. Não altere arquivos.'
+<pre><code><span class="pr">$</span> codex exec --skip-git-repo-check --sandbox read-only -c model_reasoning_effort=medium -o review.md 'Leia briefing.md e plan-v1.md. Liste os achados do plano, cada um com falha, evidência, impacto e a menor correçêo. Nêo altere arquivos.'
 <span class="out">...</span>
 <span class="pr">$</span> ls
 <span class="out">briefing.md  plan-v1.md  review.md</span></code></pre>
@@ -1376,7 +1376,7 @@ Order them by severity. Do not change any files.</pre></div>
 <p>The safeguard is the <code>--permission-mode plan</code> option: it is planning mode, where Claude reads the files but does not change any of them. Without it, “don’t change files” would just be a request.</p>
 <p data-ex="desenvolvedor" data-exlbl="In practice · Developer">Rafael reversed the roles in a second project: Codex planned, and Claude reviewed.</p>
 <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · pilot folder</span></div>
-<pre><code><span class="pr">$</span> claude -p --permission-mode plan 'Leia briefing.md e plan-v1.md. Liste os achados do plano, cada um com falha, evidência, impacto e a menor correção. Não altere arquivos.' &gt; review-claude.md</code></pre>
+<pre><code><span class="pr">$</span> claude -p --permission-mode plan 'Leia briefing.md e plan-v1.md. Liste os achados do plano, cada um com falha, evidência, impacto e a menor correçêo. Nêo altere arquivos.' &gt; review-claude.md</code></pre>
 <p class="tela-nota">Nothing appears on screen: the entire response went to review-claude.md.</p></div>
 <figcaption>To choose a model and effort level, add <code>--model</code> and <code>--effort</code>; the names depend on your account. Module 6 covers this again.</figcaption></figure>
 <div class="calma"><p><span class="k">Stuck here? That's normal</span>Never used the terminal? Use the manual path, item 4 on the chart: open a new conversation, paste the briefing, the plan, and the critique request from lesson 7, then save the response as review.md. The result is the same.</p></div>
@@ -2127,7 +2127,7 @@ At the end, stop, list the changed files, and say how to check each criterion.</
 <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · pilot folder</span></div>
 <pre><code><span class="pr">$</span> git add -A
 <span class="pr">$</span> git diff --staged --output=mudanca.diff
-<span class="pr">$</span> codex exec --sandbox read-only -o review.md "Leia briefing.md, mudanca.diff e conferencias.txt. Liste os achados. Para cada achado: onde, o que falha, impacto e a menor correção. Não altere arquivos."</code></pre>
+<span class="pr">$</span> codex exec --sandbox read-only -o review.md "Leia briefing.md, mudanca.diff e conferencias.txt. Liste os achados. Para cada achado: onde, o que falha, impacto e a menor correçêo. Nêo altere arquivos."</code></pre>
 <p class="tela-nota">The first two lines prepare everything, including new files, and save the diff. The third asks Codex only to read, and the response is saved in review.md. In Claude: <code>claude -p --permission-mode plan "…same request…" &gt; review-claude.md</code>. On Windows, prefer PowerShell 7 or the app for this <code>&gt;</code>, which can mess up accents in the older PowerShell.</p></div>
 <figcaption>"read-only" and "plan" are locks: the reviewer can't change any files.</figcaption></figure>
 <div class="calma"><p><span class="k">Stuck here? That's normal</span>Does the long command feel intimidating? Copy it, change only the file names if they're different, and paste it. Or follow the steps in the app; you'll get to the same place.</p></div>
@@ -2139,7 +2139,7 @@ At the end, stop, list the changed files, and say how to check each criterion.</
 <figure class="largo">
 <div class="lado">
 <div class="antes"><span class="rot">Vague finding</span><p>“The sum by city may have inconsistencies.”</p></div>
-<div class="depois"><span class="rot">Useful finding</span><p><b>Where:</b> juntar.py, summing line. <b>Failure:</b> “São Paulo” and “Sao Paulo” are treated as two cities. <b>Impact:</b> total split. <b>Fix:</b> remove accents before summing.</p></div>
+<div class="depois"><span class="rot">Useful finding</span><p><b>Where:</b> juntar.py, summing line. <b>Failure:</b> “Sêo Paulo” and “Sao Paulo” are treated as two cities. <b>Impact:</b> total split. <b>Fix:</b> remove accents before summing.</p></div>
 </div>
 </figure>
 </section>
@@ -2388,7 +2388,7 @@ How is it charged? Don't generate anything now, and don't use another service.</
 <p data-ex="analista" data-exlbl="In practice · Analyst">Carla received two findings. One pointed out repeated cities caused by accents: she fixed it. The other suggested changing the report format, which is under “Out of scope” in the briefing: she rejected it.</p>
 <figure class="largo">
 <div class="lado">
-<div class="bom"><span class="rot">Fixed</span><p>“São Paulo” and “Sao Paulo” counted as two cities. Criterion 2 of the briefing.</p></div>
+<div class="bom"><span class="rot">Fixed</span><p>“Sêo Paulo” and “Sao Paulo” counted as two cities. Criterion 2 of the briefing.</p></div>
 <div class="neutro"><span class="rot">Rejected</span><p>“Change the report format.” Reason: it is listed under Out of scope in the briefing.</p></div>
 </div>
 </figure>
@@ -2487,7 +2487,7 @@ Checked afterward: each city appears once; total matches the spreadsheets</pre><
 <ol><li>On the test branch, request the stage with the criteria pasted in and the stopping point (lesson 12).</li><li>Check <code>git status</code> and record the result for each criterion in <code>conferencias.txt</code>.</li><li>Generate the package and request a read-only review (lesson 13).</li><li>Fix or reject each finding and record it in <code>revisao-etapa-N.md</code>.</li><li>Check again and make the commit.</li></ol>
 <pre class="cmd"><code>git add -A
 git diff --staged --output=mudanca.diff
-codex exec --sandbox read-only -o review.md "Leia briefing.md, mudanca.diff e conferencias.txt. Liste os achados. Para cada achado: onde, o que falha, impacto e a menor correção. Não altere arquivos."
+codex exec --sandbox read-only -o review.md "Leia briefing.md, mudanca.diff e conferencias.txt. Liste os achados. Para cada achado: onde, o que falha, impacto e a menor correçêo. Nêo altere arquivos."
 git add -A
 git commit -m "etapa 2 revisada"</code></pre>
 <p>In Claude, the read-only review is <code>claude -p --permission-mode plan "…" &gt; review-claude.md</code>.</p>
@@ -2562,7 +2562,7 @@ git commit -m "etapa 2 revisada"</code></pre>
 <figcaption>A good criterion says which of the two will check it.</figcaption>
 </figure>
 <details class="mais"><summary>How Carla made the check cell</summary>
-<p>In an empty cell in the report spreadsheet, she wrote a formula that compares the total with the sum of the spreadsheets. For example: <code>=SE(B2=SOMA(C2:C8);"confere";"não confere")</code>, with B2 as the report total and C2 through C8 as the totals from each spreadsheet. Replace the cells with yours. Don’t know how to set it up? Ask AI for the formula and say which cells to compare.</p>
+<p>In an empty cell in the report spreadsheet, she wrote a formula that compares the total with the sum of the spreadsheets. For example: <code>=SE(B2=SOMA(C2:C8);"confere";"nêo confere")</code>, with B2 as the report total and C2 through C8 as the totals from each spreadsheet. Replace the cells with yours. Don’t know how to set it up? Ask AI for the formula and say which cells to compare.</p>
 </details>
 <div class="calma"><p><span class="k">Stuck here? That's normal</span>Not sure whether a criterion can have an automatic test? Ask: can you write the rule as a calculation or format (sum, numbers only, filled-in field)? Then it’s automatic. Does it depend on looking, reading, or using it? Manual check.</p></div>
 </section>
@@ -3754,7 +3754,7 @@ Read before taking action. Nothing is sent or published without my approval.
 <p>Anyone who uses the <span class="gterm" data-def="A text window where you type commands for the computer to run and read its response." data-gl="terminal">terminal</span> can run Codex prime with an extra safeguard: read-only <span class="gterm" data-def="A protected area where the assistant works with limited permissions. In read-only mode, it can read files but cannot change anything." data-gl="sandbox">sandbox</span> mode. Even if it wanted to, it couldn’t change files.</p>
 <p data-ex="desenvolvedor" data-exlbl="In practice · Developer">Rafael runs prime in the website folder. The response is saved in prime.md, and he reads it carefully before allowing the work to proceed.</p>
 <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · pilot folder</span></div>
-<pre><code><span class="pr">$</span> codex exec --sandbox read-only -o prime.md "Leia AGENTS.md e siga a ordem de leitura. Não altere nada. Responda as cinco perguntas do prime, com o arquivo de cada resposta."
+<pre><code><span class="pr">$</span> codex exec --sandbox read-only -o prime.md "Leia AGENTS.md e siga a ordem de leitura. Nêo altere nada. Responda as cinco perguntas do prime, com o arquivo de cada resposta."
 <span class="out">...</span>
 <span class="pr">$</span> cat prime.md</code></pre>
 <p class="tela-nota"><code>-o</code> saves the last response to a file. <code>cat</code> displays that file on the screen. If the folder doesn’t use <span class="gterm" data-def="A version control program: it saves each change to the files in a folder so you can see what changed and undo changes. Module 3 teaches what you need." data-gl="git">Git</span>, add <code>--skip-git-repo-check</code>: without it, <code>codex exec</code> refuses to run.</p></div>
@@ -4243,7 +4243,7 @@ say “ok” or “fail,” with the passage from the work that shows this.</pre
 </figure>
 <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
 <pre><code><span class="pr">$</span> codex exec -c model_reasoning_effort=high "Leia plan-v1.md e aponte falhas com evidência."
-<span class="pr">$</span> claude -p --effort low "Liste os textos de botão que aparecem em contato.html."</code></pre>
+<span class="pr">$</span> claude -p --effort low "Liste os textos de botêo que aparecem em contato.html."</code></pre>
 <p class="tela-nota">In Codex, the effort is <code>model_reasoning_effort</code> (from minimal to high; some models accept more), written in Codex’s <code>config.toml</code> or in the command with <code>-c</code>. In Claude Code, it’s <code>--effort</code> (low, medium, high, xhigh, or max).</p></div>
 <figcaption>The same model, two effort levels, each at the step that calls for it.</figcaption></figure>
 <div class="quiz" data-answer="c">

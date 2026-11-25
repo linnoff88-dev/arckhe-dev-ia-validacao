@@ -5,22 +5,22 @@
   <h1>Git só o necessário: <em>ver o que mudou</em></h1>
   <figure class="cena"><img src="assets/img/aula-11.webp" width="1280" height="720" alt="Um desenvolvedor compara duas folhas impressas quase iguais e marca em verde e vermelho as linhas que mudaram de uma para a outra."></figure>
   <p class="promise">Você consegue criar um branch de teste e ler um <code>git diff</code> linha a linha, dizendo o que saiu e o que entrou.</p>
-  <p class="why">No módulo 2 alguém criticou o plano. Agora a IA vai mexer em arquivos de verdade. Para revisar o que ela fez, você precisa ver exatamente o que mudou, e não o que ela diz que mudou.</p>
+  <p class="why">No módulo 2 alguém criticou o plano. Agora a IA vai mexer em arquivos de verdade. Para revisar o que ela fez, você precisa ver exatamente o que mudou, e nêo o que ela diz que mudou.</p>
   <div class="em1min">
     <p class="k">Em 1 minuto</p>
     <ol>
       <li>O Git guarda versões dos arquivos de uma pasta e mostra a diferença entre elas.</li>
-      <li>Um branch separa o teste: você mexe nele sem estragar a versão que funciona.</li>
+      <li>Um branch separa o teste: você mexe nele sem estragar a versêo que funciona.</li>
       <li>No <code>git diff</code>, linha com <b>−</b> saiu e linha com <b>+</b> entrou.</li>
     </ol>
   </div>
 </header>
 
 <section class="step" data-kind="fundamento">
-  <h2><span class="n">1</span>O Git mostra o que mudou, não o que foi dito</h2>
-  <p>O <span class="gterm" data-gl="git" data-def="Programa de controle de versões: guarda cada mudança dos arquivos de uma pasta, para você ver o que mudou e voltar atrás. O módulo 3 ensina o necessário.">Git</span> guarda versões dos arquivos de uma pasta. Com ele, você compara a versão de antes com a de agora, linha por linha.</p>
+  <h2><span class="n">1</span>O Git mostra o que mudou, nêo o que foi dito</h2>
+  <p>O <span class="gterm" data-gl="git" data-def="Programa de controle de versões: guarda cada mudança dos arquivos de uma pasta, para você ver o que mudou e voltar atrás. O módulo 3 ensina o necessário.">Git</span> guarda versões dos arquivos de uma pasta. Com ele, você compara a versêo de antes com a de agora, linha por linha.</p>
   <p>Para revisar trabalho de IA, isso é o que importa. O resumo diz "alterei o formulário". A diferença mostra quais linhas, em quais arquivos.</p>
-  <p data-ex="desenvolvedor">Rafael pediu uma correção no campo telefone do site da clínica. O resumo falava de um arquivo. A diferença mostrou dois: a IA também tinha mexido no rodapé.</p>
+  <p data-ex="desenvolvedor">Rafael pediu uma correçêo no campo telefone do site da clínica. O resumo falava de um arquivo. A diferença mostrou dois: a IA também tinha mexido no rodapé.</p>
   <figure class="largo">
     <div class="lado">
       <div class="antes"><span class="rot">Sem Git</span><p><b>Pergunta:</b> "o que você mudou?"</p><p><b>Resposta:</b> o resumo da IA, com a memória dela.</p></div>
@@ -32,9 +32,9 @@
 
 <section class="step" data-kind="fundamento">
   <h2><span class="n">2</span>Um branch é uma linha de teste</h2>
-  <p>Antes de a IA mexer, crie um <span class="gterm" data-gl="branch" data-def="Linha de teste separada dentro do Git. Você testa mudanças nela sem mexer na versão que já funciona.">branch</span>. Se a mudança não prestar, a versão que funciona continua intacta.</p>
+  <p>Antes de a IA mexer, crie um <span class="gterm" data-gl="branch" data-def="Linha de teste separada dentro do Git. Você testa mudanças nela sem mexer na versêo que já funciona.">branch</span>. Se a mudança nêo prestar, a versêo que funciona continua intacta.</p>
   <p>No <span class="gterm" data-gl="terminal" data-def="Janela de texto em que você digita comandos para o computador executar e lê a resposta.">terminal</span>, dentro da pasta do projeto, um comando cria o branch e já entra nele. O <code>git status</code> confirma onde você está.</p>
-  <p data-ex="desenvolvedor">Rafael criou o branch <code>formulario-contato</code> antes de pedir qualquer coisa à IA. A versão publicada do site ficou no branch principal.</p>
+  <p data-ex="desenvolvedor">Rafael criou o branch <code>formulario-contato</code> antes de pedir qualquer coisa à IA. A versêo publicada do site ficou no branch principal.</p>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · pasta do site</span></div>
 <pre><code><span class="pr">$</span> git switch -c formulario-contato
 <span class="out">Switched to a new branch 'formulario-contato'</span>
@@ -47,8 +47,8 @@ nothing to commit, working tree clean</span></code></pre>
 
 <section class="step" data-kind="fundamento">
   <h2><span class="n">3</span>Lendo o diff: − saiu, + entrou</h2>
-  <p>Depois que a IA trabalha, rode primeiro o <code>git status</code>: ele lista todos os arquivos que mudaram, inclusive os novos. Arquivo novo não aparece no <code>git diff</code> até você usar o <code>git add</code>, que a aula 13 mostra.</p>
-  <p>Em seguida, o <code>git diff</code> mostra o <span class="gterm" data-gl="diff" data-def="A lista do que mudou entre duas versões de um arquivo: linhas que saíram (com −) e linhas que entraram (com +).">diff</span>. Cada arquivo alterado vem com o nome. Linha que começa com <b>−</b> saiu; linha com <b>+</b> entrou. As outras são contexto, sem mudança.</p>
+  <p>Depois que a IA trabalha, rode primeiro o <code>git status</code>: ele lista todos os arquivos que mudaram, inclusive os novos. Arquivo novo nêo aparece no <code>git diff</code> até você usar o <code>git add</code>, que a aula 13 mostra.</p>
+  <p>Em seguida, o <code>git diff</code> mostra o <span class="gterm" data-gl="diff" data-def="A lista do que mudou entre duas versões de um arquivo: linhas que saíram (com −) e linhas que entraram (com +).">diff</span>. Cada arquivo alterado vem com o nome. Linha que começa com <b>−</b> saiu; linha com <b>+</b> entrou. As outras sêo contexto, sem mudança.</p>
   <p data-ex="desenvolvedor">No diff de Rafael, uma linha do campo telefone saiu e outra entrou no lugar. Ele leu as duas e viu a regra nova: só números, espaço, parênteses e hífen.</p>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · pasta do site</span></div>
 <pre><code><span class="pr">$</span> git diff
@@ -66,17 +66,17 @@ index 3f2a1c0..8b7d4e2 100644
   <div class="quiz" data-answer="b">
     <p class="qk">Teste-se</p>
     <p class="q">No diff, uma linha começa com −. O que isso quer dizer?</p>
-    <button class="opt" data-k="a" data-fb="Não. Linha com + é a que entrou.">A linha foi acrescentada</button>
-    <button class="opt" data-k="b" data-fb="Isso. Com − é a versão antiga, que saiu.">A linha foi retirada</button>
-    <button class="opt" data-k="c" data-fb="Linha com erro não ganha sinal. Sem sinal é só contexto.">A linha tem um erro</button>
+    <button class="opt" data-k="a" data-fb="Nêo. Linha com + é a que entrou.">A linha foi acrescentada</button>
+    <button class="opt" data-k="b" data-fb="Isso. Com − é a versêo antiga, que saiu.">A linha foi retirada</button>
+    <button class="opt" data-k="c" data-fb="Linha com erro nêo ganha sinal. Sem sinal é só contexto.">A linha tem um erro</button>
     <p class="qfb" aria-live="polite"></p>
   </div>
 </section>
 
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">4</span>Sem terminal: peça o diff ao assistente</h2>
-  <p>Se você usa o assistente pelo app, não precisa abrir o terminal. Peça a ele que mostre o diff completo do que mudou. O assistente roda o comando e cola o resultado.</p>
-  <p data-ex="analista">Carla usa o Codex pelo app. Depois de cada pedido, ela escreve: "mostre o git diff completo". Assim ela vê as linhas, e não só a frase "alterei o juntar.py".</p>
+  <p>Se você usa o assistente pelo app, nêo precisa abrir o terminal. Peça a ele que mostre o diff completo do que mudou. O assistente roda o comando e cola o resultado.</p>
+  <p data-ex="analista">Carla usa o Codex pelo app. Depois de cada pedido, ela escreve: "mostre o git diff completo". Assim ela vê as linhas, e nêo só a frase "alterei o juntar.py".</p>
   <p>Planilha .xlsx é diferente: no diff ela aparece só como "Binary files differ", sem as células. Para planilha, peça ao assistente o resumo das células que mudaram, ou trabalhe com a cópia em CSV, que o diff mostra linha por linha.</p>
   <figure class="largo">
     <div class="tela">
@@ -86,7 +86,7 @@ index 3f2a1c0..8b7d4e2 100644
           <p class="msg eu"><span class="quem">Carla</span>Some os pedidos por cidade no arquivo juntar.py.</p>
           <p class="msg ia falha"><span class="quem">IA</span>Pronto. Ajustei a soma por cidade.</p>
         </div>
-        <p class="tela-nota ruim">Ajustou onde? Quantas linhas? Não dá para saber.</p>
+        <p class="tela-nota ruim">Ajustou onde? Quantas linhas? Nêo dá para saber.</p>
       </div>
       <div class="tela-caso" data-rotulo="Pedindo o diff">
         <div class="tela-body">
@@ -110,14 +110,14 @@ index 3f2a1c0..8b7d4e2 100644
   <p class="pk">Pratique agora <span class="pcount">0/4</span></p>
   <h3 class="ph">Seu primeiro diff, na pasta do piloto</h3>
   <p class="pgoal">Pronto quando você tiver lido um diff do seu <code>briefing.md</code> e anotado uma linha que saiu e uma que entrou. Cerca de 12 minutos, no computador.</p>
-  <p class="psafe">Tudo acontece na pasta do piloto, com o <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span> da aula 5; não fez? Crie qualquer arquivo de texto ali. Se aparecer "git: command not found" (no Windows: "O termo 'git' não é reconhecido"), instale o Git pelo site oficial, git-scm.com, e feche e reabra o terminal. Se o <span class="gterm" data-gl="commit" data-def="Uma versão salva no Git, com data e uma frase dizendo o que mudou.">commit</span> pedir nome e e-mail, rode os dois comandos <code>git config</code> que ele mostrar, trocando o nome e o e-mail de exemplo pelos seus. Prefere não usar terminal? Peça cada passo ao seu assistente, na pasta do piloto.</p>
+  <p class="psafe">Tudo acontece na pasta do piloto, com o <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span> da aula 5; nêo fez? Crie qualquer arquivo de texto ali. Se aparecer "git: command not found" (no Windows: "O termo 'git' nêo é reconhecido"), instale o Git pelo site oficial, git-scm.com, e feche e reabra o terminal. Se o <span class="gterm" data-gl="commit" data-def="Uma versêo salva no Git, com data e uma frase dizendo o que mudou.">commit</span> pedir nome e e-mail, rode os dois comandos <code>git config</code> que ele mostrar, trocando o nome e o e-mail de exemplo pelos seus. Prefere nêo usar terminal? Peça cada passo ao seu assistente, na pasta do piloto.</p>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">git init
 git add briefing.md
 git commit -m "briefing inicial"
 git switch -c teste-diff
 git diff</pre></div>
   <ol class="psteps">
-    <li><label><input type="checkbox" data-ptask="1"> <span>Abra o terminal na pasta do piloto (Windows 11: botão direito na pasta › Abrir no Terminal; Mac: abra o Terminal, digite <code>cd </code> com espaço e arraste a pasta para a janela, depois Enter). Rode as três primeiras linhas: o Git passa a guardar versões e salva a primeira.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="1"> <span>Abra o terminal na pasta do piloto (Windows 11: botêo direito na pasta › Abrir no Terminal; Mac: abra o Terminal, digite <code>cd </code> com espaço e arraste a pasta para a janela, depois Enter). Rode as três primeiras linhas: o Git passa a guardar versões e salva a primeira.</span></label></li>
     <li><label><input type="checkbox" data-ptask="2"> <span>Rode <code>git switch -c teste-diff</code> e confira a resposta "Switched to a new branch".</span></label></li>
     <li><label><input type="checkbox" data-ptask="3"> <span>Abra o <code>briefing.md</code>, troque as palavras de um critério e salve.</span></label></li>
     <li><label><input type="checkbox" data-ptask="4"> <span>Rode <code>git diff</code> e anote a linha com − e a linha com +.</span></label></li>
@@ -148,8 +148,8 @@ git diff</pre></div>
 <script type="application/json" id="cards-11">
 [
   {"front":"O resumo da IA fala de um arquivo alterado. Como você descobre se ela mexeu em outros, inclusive criando arquivos novos?","back":"Pelo git status: ele lista todos os arquivos que mudaram e os novos. O git diff mostra as linhas dos arquivos que o Git já acompanha."},
-  {"front":"Por que criar um branch antes de pedir uma mudança à IA?","back":"Para testar à parte. Se não prestar, a versão que funciona continua intacta."},
-  {"front":"Você usa o assistente pelo app e não abre terminal. Como vê o que mudou?","back":"Pedindo a ele: \"mostre o git diff completo do que você mudou\"."}
+  {"front":"Por que criar um branch antes de pedir uma mudança à IA?","back":"Para testar à parte. Se nêo prestar, a versêo que funciona continua intacta."},
+  {"front":"Você usa o assistente pelo app e nêo abre terminal. Como vê o que mudou?","back":"Pedindo a ele: \"mostre o git diff completo do que você mudou\"."}
 ]
 </script>
 </section>
