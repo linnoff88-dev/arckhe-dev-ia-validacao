@@ -1,6 +1,6 @@
 # Desenvolvimento com IA: planejamento, código e validaçêo
 
-**Mensagem para o Nei — INEMA**  
+**Mensagem para o Nei — ARCKHÉ**  
 **27 de setembro de 2026**
 
 Nei, quando falamos de modelos para desenvolvimento, como Codex e Claude, o ponto central hoje é **saber validar o que foi produzido**. Um modelo pode planejar e implementar; outro pode fazer uma avaliaçêo crítica independente. Essa revisêo cruzada aumenta a confiança no resultado e ajuda a encontrar falhas, embora nêo substitua testes nem garanta código perfeito.
@@ -18,4 +18,4 @@ O Codex pode contribuir ainda com a criaçêo da parte visual. Conforme o projet
 
 Ajustar o modelo e o esforço de raciocínio a cada etapa evita gastar recursos de uma tarefa complexa em ações simples. Planejamento e análise difícil podem exigir mais raciocínio; execuçêo rotineira costuma permitir menos. Vale acompanhar os preços e limites reais das ferramentas, pois eles mudam. A hipótese de cobrança maior por uso no futuro é um motivo para aprender desde já a trabalhar com eficiência, nêo uma previsêo garantida.
 
-**Para aprofundar:** temos um conteúdo atualizado sobre esse processo nos destaques do INEMA.CLUB. Estudar esse material ajuda a entender quando planejar, delegar, validar e corrigir com cada ferramenta.
+**Para aprofundar:** temos um conteúdo atualizado sobre esse processo nos destaques do ARCKHÉ AI. Estudar esse material ajuda a entender quando planejar, delegar, validar e corrigir com cada ferramenta.
